@@ -9,7 +9,7 @@ import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 const burger = (props) =>{
 
     //Object.keys returns an array of a given object's own property names
-    const transformedIngrediencts = Object.keys(props.ingredients)
+    let transformedIngrediencts = Object.keys(props.ingredients)
         .map(igKey => {
             return [...Array(props.ingredients[igKey])].map((_,i)=>{
                return <BurgerIngredient key = {igKey + i} type={igKey}/>
@@ -17,9 +17,12 @@ const burger = (props) =>{
         })
         .reduce((arr,el) =>{
             return  arr.concat(el)
-        },[])
+        },[]);
     console.log(transformedIngrediencts)
 
+    if(transformedIngrediencts.length === 0){
+        transformedIngrediencts = <p>add ingrediencts</p>
+    }
     return(
         <div className={classes.Burger}>
             <BurgerIngredient type="bread-top"/>
