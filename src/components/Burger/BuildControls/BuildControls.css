@@ -1,10 +1,7 @@
 .BuildControls {
     width: 100%;
-<<<<<<< HEAD
     background-color: #CF8F2E;
-=======
     background-color: #CF9F2E;
->>>>>>> 30ae0c711ea191196586e6488f63d73ff80bdee0
     display: flex;
     flex-flow: column;
     align-items: center;
