@@ -8,7 +8,7 @@ const controls = [
 
 const buildControls = (props) =>{
     return <div>
-        <button></button>
+        <button>ok</button>
     </div>
 
 }
